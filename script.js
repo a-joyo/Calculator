@@ -111,36 +111,28 @@ clear.addEventListener("click", function () {
 
 
 add.addEventListener("click", function () {
-    if (mathOperator != null) { // There is already a math operation
-        equals();
-    }
+    equals();
     mathOperator = "+";
     firstNum = displayNum;
     displayNum = 0;
 });
 
 subtract.addEventListener("click", function () {
-    if (mathOperator != null) { // There is already a math operation
-        equals();
-    }
+    equals();
     mathOperator = "-";
     firstNum = displayNum;
     displayNum = 0;
 });
 
 divide.addEventListener("click", function () {
-    if (mathOperator != null) { // There is already a math operation
-        equals();
-    }
+    equals();
     mathOperator = "/";
     firstNum = displayNum;
     displayNum = 0;
 });
 
 multiply.addEventListener("click", function () {
-    if (mathOperator != null) { // There is already a math operation
-        equals();
-    }
+    equals();
     mathOperator = "*";
     firstNum = displayNum;
     displayNum = 0;
@@ -148,31 +140,34 @@ multiply.addEventListener("click", function () {
 
 equal.addEventListener("click", function () {
     equals();
+    mathOperator = null;
 });
 
 function equals() {
-    if (mathOperator == "+") {
-        displayNum += firstNum;
-        output.innerText = displayNum;
-    }
-    else if (mathOperator == "-") {
-        displayNum = firstNum - displayNum;
-        output.innerText = displayNum;
-    }
-    else if (mathOperator == "/") {
-        if (displayNum == 0) {
-            output.innerText = "error";
-            console.log("divide by zero");
-            return;
+
+    if (mathOperator != null) {
+
+        if (mathOperator == "+") {
+            displayNum += firstNum;
+            output.innerText = displayNum;
         }
-        displayNum = firstNum / displayNum;
-        output.innerText = displayNum;
-    }
-    else if (mathOperator == "*") {
-        displayNum *= firstNum;
-        output.innerText = displayNum;
+        else if (mathOperator == "-") {
+            displayNum = firstNum - displayNum;
+            output.innerText = displayNum;
+        }
+        else if (mathOperator == "/") {
+            if (displayNum == 0) {
+                output.innerText = "error";
+                return;
+            }
+            displayNum = firstNum / displayNum;
+            output.innerText = displayNum;
+        }
+        else if (mathOperator == "*") {
+            displayNum *= firstNum;
+            output.innerText = displayNum;
+        }
     }
 }
 // function to use the same code for it all, dont reuse code
-
 
