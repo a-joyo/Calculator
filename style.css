@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+    padding: 10px;
+    margin: 10px;
+    font-family: inherit;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: rgb(242, 249, 243);
+    border-style: solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 10px;
+    border: 1px solid #000;
+
+
+}
+
+.calc_container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    margin-top: 1rem;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid#999;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-style: solid;
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+
+}
+
+.calculations {
+    text-align: right;
+    border-style: solid;
+    vertical-align: auto;
+    display: inline-grid;
+    object-position: left top;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+
+}
+
+span {
+    font-size: 3rem;
+    background-color: #c88717;
+    padding: 2px 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    color: #f5fafa;
+}
+
+button {
+    font-size: 3rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+}
+
+.clearButton {
+    font-size: 3rem;
+    background-color: #1c5c8d;
+    padding: 2px 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    color: #f5fafa;
+
+}
