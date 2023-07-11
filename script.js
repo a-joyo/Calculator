@@ -140,7 +140,6 @@ multiply.addEventListener("click", function () {
 
 equal.addEventListener("click", function () {
     equals();
-    mathOperator = null;
 });
 
 function equals() {
@@ -168,6 +167,7 @@ function equals() {
             output.innerText = displayNum;
         }
     }
+    mathOperator = null;
 }
 // function to use the same code for it all, dont reuse code
 
